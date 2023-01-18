@@ -1,0 +1,140 @@
+body {
+    background-color: rgb(89, 89, 112);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro,
+.footer {
+    width: 440px;
+}
+
+.cadastro {
+    background-color: white;
+    padding: 40px;
+    margin-top: 100px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    box-shadow: 2px 2px rgb(76, 76, 92);
+}
+
+.titulo h1 {
+    color: darkcyan;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.titulo p {
+    padding-bottom: 30px;
+    color: rgb(46, 46, 54);
+    font-size: 14px;
+}
+
+.cadastro .inputs {
+    display: grid;
+    grid-template-areas: "nome nome"
+        "email email"
+        "telefone cpf"
+        "cep cidade"
+        "bairro bairro"
+        "logradouro numero"
+        "btn btn";
+    gap: 20px;
+}
+
+@media(max-width: 720px) {
+    .cadastro,
+    .footer {
+        width: 100vw;
+    }
+
+    .cadastro .inputs {
+        display: block;
+    }
+
+    .cadastro .inputs input {
+        margin-bottom: 20px;
+    }
+}
+
+.cadastro .inputs label {
+    color: rgb(46, 46, 54);
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.cadastro .inputs input {
+    height: 45px;
+    border: 1px solid rgb(46, 46, 54);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cadastro .inputs .nome {
+    grid-area: nome;
+}
+
+.cadastro .inputs .email {
+    grid-area: email;
+}
+
+.cadastro .inputs .telefone {
+    grid-area: telefone;
+}
+
+.cadastro .inputs .cpf {
+    grid-area: cpf;
+}
+
+.cadastro .inputs .cep {
+    grid-area: cep;
+}
+
+.cadastro .inputs .cidade {
+    grid-area: cidade;
+}
+
+.cadastro .inputs .bairro {
+    grid-area: bairro;
+}
+
+.cadastro .inputs .logradouro {
+    grid-area: logradouro;
+}
+
+.cadastro .inputs .numero {
+    grid-area: numero;
+}
+
+.cadastro .inputs label .asterisco {
+    color: darkcyan;
+}
+
+.cadastro .inputs .btn {
+    grid-area: btn;
+}
+
+.cadastro .inputs .btn input {
+    background-color: darkcyan;
+    color: white;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.cadastro .inputs .btn input:hover {
+    cursor: pointer;
+}
+
+.footer p {
+    color: white;
+    font-size: 14px;
+    padding: 40px 0 80px 0;
+}
